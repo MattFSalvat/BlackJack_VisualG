@@ -1,4 +1,4 @@
-Algoritmo "RPG"
+Algoritmo "Projeto RPG - Menu"
 var
    enemie:vetor [1..5] de inteiro
    menu, health, xp:inteiro
