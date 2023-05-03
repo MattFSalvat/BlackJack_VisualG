@@ -1,17 +1,19 @@
 Algoritmo "Projeto RPG - Menu"
 var
    enemie:vetor [1..5] de inteiro
-   menu, health, xp, D20:inteiro
+   menu, hp, nehp, acne, D20:inteiro
+   f:caractere
 Inicio
-health <- 100
-   enquanto health<>0 faca
+hp <- 100
+nehp <- 100
+   enquanto hp<>0 faca
    escreval("1- Iniciar")
    escreval("2- Sair")
    leia(menu)
    se(menu=1)entao
       limpatela
-      enquanto health<>0 faca
-         health <- health - 10
+      enquanto hp<>0 faca
+         escreval("Sua saúde: ",hp, ". Saúde do inimigo: ",nehp)
          escreval("1- Atacar")
          escreval("2- Defender")
          escreval("3- Fugir")
@@ -19,22 +21,29 @@ health <- 100
          se(menu=1)entao
             limpatela
             D20 <- randi(20)
-            escreval("D20: ",D20)
-            leia(menu)
+            nehp <- nehp - D20
+            escreval("Seu D20: ",D20)
+            acne <- randi(3)
+            se()entao
+            fimse
+            escreva("Aperte ENTER para prosseguir.")
+            leia(f)
             limpatela
          fimse
          se(menu=2)entao
             limpatela
             D20 <- randi(20)
             escreval("D20: ",D20)
-            leia(menu)
+            escreva("Aperte ENTER para prosseguir.")
+            leia(f)
             limpatela
          fimse
          se(menu=3)entao
             limpatela
             D20 <- randi(20)
             escreval("D20: ",D20)
-            leia(menu)
+            escreva("Aperte ENTER para prosseguir.")
+            leia(f)
             limpatela
          fimse
       fimenquanto
