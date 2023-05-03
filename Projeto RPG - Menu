@@ -1,9 +1,7 @@
 Algoritmo "Projeto RPG - Menu"
 var
    enemie:vetor [1..5] de inteiro
-   cardeal:vetor[1..4] de inteiro
    menu, health, xp, D20:inteiro
-
 Inicio
 health <- 100
    enquanto health<>0 faca
