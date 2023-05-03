@@ -1,0 +1,92 @@
+algoritmo "semnome"
+var
+pts : vetor [0..20] de inteiro
+atq, def, agl, hp, carisma, disp, menupts, qntpt : inteiro
+not : caracter
+inicio
+disp <- disp + 20
+enquanto disp > 0 faca
+escreval("/==============================\")
+escreval("|     PONTOS DE HABILIDADE     |")
+se disp > 9 entao
+   escreval("|   pontos disponíveis =", disp, "    |")
+senao
+   escreval("|   pontos disponíveis =", disp, "     |")
+fimse
+se atq > 9 entao
+    escreval("| 1 - ATQ = +", atq, "               |")
+senao
+     escreval("| 1 - ATQ = +", atq, "                |")
+fimse
+escreval("|                              |")
+se def > 9 entao
+    escreval("| 2 - DEF = +", def, "               |")
+senao
+     escreval("| 2 - DEF = +", def, "                |")
+fimse
+escreval("|                              |")
+se agl > 9 entao
+    escreval("| 3 - AGL = +", agl, "               |")
+senao
+     escreval("| 3 - AGL = +", agl, "                |")
+fimse
+escreval("|                              |")
+se hp > 9 entao
+    escreval("| 4 - HP = +", hp, "                |")
+senao
+     escreval("| 4 - HP = +", hp, "                 |")
+fimse
+escreval("|                              |")
+se carisma > 9 entao
+    escreval("| 5 - CRSM = +", carisma, "              |")
+senao
+     escreval("| 5 - CRSM = +", carisma, "               |")
+fimse
+escreval("\______________________________/")
+escreva("Onde você deseja atribuir seu ponto: ")
+              leia(menupts)
+se menupts = 1 entao
+   escreval("Quantos pontos deseja adcionar? ") //mudança
+   escreva("Pontos: ") //mudança
+   leia(qntpt) //mudança
+   atq <- atq+qntpt //mudança
+   senao
+        se menupts = 2 entao
+           escreval("Quantos pontos deseja adcionar? ") //mudança
+           escreva("Pontos: ") //mudança
+           leia(qntpt) //mudança
+           def <- def+qntpt //mudança
+           senao
+                se menupts = 3 entao
+                   escreval("Quantos pontos deseja adcionar? ") //mudança
+                   escreva("Pontos: ") //mudança
+                   leia(qntpt) //mudança
+                   agl <- agl+qntpt //mudança
+                   senao
+                        se menupts = 4 entao
+                           escreval("Quantos pontos deseja adcionar? ") //mudança
+                           escreva("Pontos: ") //mudança
+                           leia(qntpt) //mudança
+                           hp <- hp+qntpt //mudança
+                           senao
+                                se menupts = 5 entao
+                                   escreval("Quantos pontos deseja adcionar? ") //mudança
+                                   escreva("Pontos: ") //mudança
+                                   leia(qntpt) //mudança
+                                   carisma <- carisma+qntpt //mudança
+                                   senao
+                                        escreval("Insira um número válido!")
+                                fimse
+                        fimse
+                fimse
+        fimse
+fimse
+limpatela
+disp <- disp-qntpt //mudança
+
+fimenquanto
+se disp = 0 entao
+   escreva("Pressione ENTER para continuar: ")
+                      leia(not)
+fimalgoritmo
+fimse
