@@ -1,7 +1,9 @@
 Algoritmo "Projeto RPG - Menu"
 var
    enemie:vetor [1..5] de inteiro
-   menu, health, xp:inteiro
+   cardeal:vetor[1..4] de inteiro
+   menu, health, xp, D20:inteiro
+
 Inicio
 health <- 100
    enquanto health<>0 faca
@@ -9,6 +11,35 @@ health <- 100
    escreval("2- Sair")
    leia(menu)
    se(menu=1)entao
+      limpatela
+      enquanto health<>0 faca
+         health <- health - 10
+         escreval("1- Atacar")
+         escreval("2- Defender")
+         escreval("3- Fugir")
+         leia(menu)
+         se(menu=1)entao
+            limpatela
+            D20 <- randi(20)
+            escreval("D20: ",D20)
+            leia(menu)
+            limpatela
+         fimse
+         se(menu=2)entao
+            limpatela
+            D20 <- randi(20)
+            escreval("D20: ",D20)
+            leia(menu)
+            limpatela
+         fimse
+         se(menu=3)entao
+            limpatela
+            D20 <- randi(20)
+            escreval("D20: ",D20)
+            leia(menu)
+            limpatela
+         fimse
+      fimenquanto
    fimse
    se(menu=2)entao
       limpatela
