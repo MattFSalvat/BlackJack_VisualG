@@ -26,6 +26,10 @@ nehp <- 100
             acne <- randi(3)
             se()entao
             fimse
+            se()entao
+            fimse
+            se()entao
+            fimse
             escreva("Aperte ENTER para prosseguir.")
             leia(f)
             limpatela
